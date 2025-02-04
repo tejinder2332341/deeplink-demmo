@@ -1,17 +1,11 @@
 {
   "applinks": {
-    "details": [
-      {
-        "appIDs": [
-          "HM42H3H2J3.com.1Gen.Gcom"
-        ],
-        "components": [
+      "apps": [],
+      "details": [
           {
-            "/": "/list/*",
-            "comment": "Matches any URL whose path starts with /list/"
+              "appID": "HM42H3H2J3.com.1Gen.Gcom",
+              "paths": ["/list", "/home", "/profile/*"]
           }
-        ]
-      }
-    ]
+      ]
   }
 }
