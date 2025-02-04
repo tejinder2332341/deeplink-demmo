@@ -1,0 +1,17 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "HM42H3H2J3.com.1Gen.Gcom"
+        ],
+        "components": [
+          {
+            "/": "/list/*",
+            "comment": "Matches any URL whose path starts with /list/"
+          }
+        ]
+      }
+    ]
+  }
+}
