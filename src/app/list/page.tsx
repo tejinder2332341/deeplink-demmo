@@ -2,23 +2,26 @@ import { useEffect } from "react";
 
 const ListPage = () => {
   useEffect(() => {
-    const appScheme = "your-app-scheme://list";  // Replace with your actual app scheme
+    // Replace with your actual URL scheme.
+    const appScheme = "silver-talkies://list";
+    // App Store fallback URL for Silver Talkies.
     const appStoreURL = "https://apps.apple.com/in/app/silver-talkies/id1576719437";
 
-    // Create an invisible iframe to attempt opening the app
+    // 1. Create an invisible iframe to open the app scheme
     const iframe = document.createElement("iframe");
     iframe.style.display = "none";
     iframe.src = appScheme;
     document.body.appendChild(iframe);
 
-    // Fallback: If the user doesn't have the app, redirect to the App Store
-    setTimeout(() => {
+    // 2. Fallback to App Store after 1.5 seconds if the app is not installed
+    const timer = setTimeout(() => {
       window.location.href = appStoreURL;
     }, 1500);
 
-    // Cleanup: remove iframe after the effect
+    // Cleanup: remove iframe & timer
     return () => {
       document.body.removeChild(iframe);
+      clearTimeout(timer);
     };
   }, []);
 
