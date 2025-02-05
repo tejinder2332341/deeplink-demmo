@@ -2,13 +2,24 @@ import { useEffect } from "react";
 
 const ListPage = () => {
   useEffect(() => {
-    // Try opening the app
-    window.location.href = "your-app-scheme://list";
+    const appScheme = "your-app-scheme://list";  // Replace with your actual app scheme
+    const appStoreURL = "https://apps.apple.com/in/app/silver-talkies/id1576719437";
 
-    // If the app is not installed, redirect to the App Store after 2 seconds
+    // Create an invisible iframe to attempt opening the app
+    const iframe = document.createElement("iframe");
+    iframe.style.display = "none";
+    iframe.src = appScheme;
+    document.body.appendChild(iframe);
+
+    // Fallback: If the user doesn't have the app, redirect to the App Store
     setTimeout(() => {
-      window.location.href = "https://apps.apple.com/in/app/silver-talkies/id1576719437";
-    }, 2000);
+      window.location.href = appStoreURL;
+    }, 1500);
+
+    // Cleanup: remove iframe after the effect
+    return () => {
+      document.body.removeChild(iframe);
+    };
   }, []);
 
   return (
