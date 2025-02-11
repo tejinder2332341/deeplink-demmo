@@ -1,11 +1,12 @@
 {
-  "applinks": {
-      "apps": [],
-      "details": [
-          {
-              "appID": "HM42H3H2J3.com.1Gen.Gcom",
-              "paths": ["/list", "/home", "/profile/*"]
-          }
-      ]
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "HM42H3H2J3.com.1Gen.Gcom",
+                "paths": ["/list", "/home", "/profile/*", "/eventdetails/*"]
+            }
+        ]
+    }
   }
-}
+  
