@@ -1,20 +1,20 @@
 {
-    "applinks": {
-      "apps": [],
-      "details": [
-        {
-          "appID": "HM42H3H2J3.com.1Gen.Gcom",
-          "paths": [
-            "/list",
-            "/home",
-            "/profile/*",
-            "/eventdetails/*",
-            "/meetupdetail/*",
-            "/classdetail/*",
-            "/article/*"
-          ]
-        }
-      ]
-    }
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "MXM8X8KC59.com.care.people",
+        "paths": [
+          "/list",
+          "/home",
+          "/profile/*",
+          "/eventdetails/*",
+          "/meetupdetail/*",
+          "/classdetail/*",
+          "/article/*",
+          "/story/*"
+        ]
+      }
+    ]
   }
-  
+}
