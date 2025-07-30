@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.onegen.care",
+    "sha256_cert_fingerprints": ["D6:24:D9:57:82:D6:31:E7:11:A0:9D:C5:1B:6B:5B:9E:A0:5E:6F:67:81:D3:D8:E5:1A:EF:1E:49:3C:4A:32:2A", "SHA256_CERT_FINGERPRINT_2"] // SHA256 fingerprints of your app's signing certificate(s)
+  }
+}]
