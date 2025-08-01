@@ -12,7 +12,8 @@
           "/meetupdetail/*",
           "/classdetail/*",
           "/article/*",
-          "/story/*"
+          "/story/*",
+          "/traveldetail/*"
         ]
       }
     ]
