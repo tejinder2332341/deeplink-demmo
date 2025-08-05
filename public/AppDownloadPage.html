@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Inner Explorer HOME App</title>
+    <style>
+        /* Replace with your font url*/
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        :root {
+            --primary-green: #2FBCC2;
+            --text-muted: #1A6082;
+            --border-gray: #FD4876;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: rgb(243, 243, 243);
+        }
+
+        .header {
+            width: 100%;
+            padding: 1rem 0rem;
+            background-color: var(--card-bg);
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        .logo-container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-container img {
+            height: 30px;
+        }
+
+        .header .logo {
+            width: 2rem;
+            height: 2rem;
+            margin-right: 0.5rem;
+        }
+
+        .header .app-name {
+            font-weight: 600;
+            font-size: 1.25rem;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            max-width: 48rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            text-align: center;
+            max-width: 35rem;
+            width: 100%;
+        }
+
+        .card h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+        }
+
+        .card h1 span {
+            color: var(--border-gray);
+        }
+
+        .card p.subtitle {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        .download-options {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .download-option {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-gray);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .download-option:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transform: translateY(-0.25rem);
+            border-color: var(--primary-green);
+            cursor: pointer;
+        }
+
+        .download-option img {
+            max-width: 150px;
+            margin-bottom: 1rem;
+        }
+
+        .download-options a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .download-option span {
+            font-size: 0.875rem;
+            font-weight: 300;
+            color: black;
+        }
+
+        @media (min-width: 768px) {
+            .download-options {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        /* Phones (up to 480px) */
+        @media (max-width: 480px) {
+            .card {
+                padding: 1.5rem 1rem;
+            }
+
+            .card h1 {
+                font-size: 1.5rem;
+            }
+
+            .card p.subtitle {
+                font-size: 0.9rem;
+            }
+
+            .download-option img {
+                max-width: 120px;
+            }
+
+            .header {
+                padding: 0.75rem 1rem;
+            }
+        }
+
+        /* Small Devices (481px - 767px) */
+        @media (min-width: 481px) and (max-width: 767px) {
+            .card {
+                padding: 2rem 1.5rem;
+            }
+
+            .card h1 {
+                font-size: 1.75rem;
+            }
+
+            .card p.subtitle {
+                font-size: 1rem;
+            }
+
+            .download-option img {
+                max-width: 130px;
+            }
+        }
+
+        /* Medium Devices (768px - 1023px) */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .card h1 {
+                font-size: 2rem;
+            }
+
+            .card p.subtitle {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* Large Devices (1024px - 1439px) */
+        @media (min-width: 1024px) and (max-width: 1439px) {
+            .card h1 {
+                font-size: 2.25rem;
+            }
+
+            .card p.subtitle {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Extra-Large Screens (1440px and up) */
+        @media (min-width: 1440px) {
+            main {
+                max-width: 60rem;
+            }
+
+            .card {
+                padding: 3rem;
+            }
+
+            .card h1 {
+                font-size: 2.5rem;
+            }
+
+            .card p.subtitle {
+                font-size: 1.25rem;
+            }
+
+            .download-option img {
+                max-width: 160px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-container">
+            <!-- logo of Silver takies -->
+            <img src="./Logo/st_logo.png" alt="Silver Takies">
+
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="card">
+            <h1>Download the <span>Silver Talkies</span> App</h1>
+            <p class="subtitle">Choose your device below to begin a world of engaging conversations and fun activities.
+            </p>
+            <div class="download-options">
+                <a href="https://play.google.com/store/apps/details?id=com.onegen.care&hl=en_IN"
+                    class="download-option">
+                    <img src="./Logo/google-play.png" alt="Google Play store">
+                    <span>Download for Android</span>
+                </a>
+                <a href="https://apps.apple.com/in/app/silver-talkies/id1576719437" class="download-option">
+                    <img src="./Logo/app-store.png" alt="Apple App Store">
+                    <span>Download for IOS</span>
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
