@@ -1,13 +1,15 @@
 [
   {
-    "relation": ["delegate_permission/common.handle_all_urls"],
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
     "target": {
       "namespace": "android_app",
       "package_name": "com.onegen.care",
       "sha256_cert_fingerprints": [
         "D6:24:D9:57:82:D6:31:E7:11:A0:9D:C5:1B:6B:5B:9E:A0:5E:6F:67:81:D3:D8:E5:1A:EF:1E:49:3C:4A:32:2A",
         "FC:6A:0F:DA:39:C3:79:26:29:B3:50:C7:1C:25:2F:7E:D0:6A:BB:9D:0C:B3:EA:14:1E:39:76:E8:66:41:D1:D9",
-		"93:51:EE:C2:F2:8D:51:09:B1:DF:91:5A:55:82:09:72:BC:4A:B2:0A:6E:B2:6D:3F:19:D3:81:C6:CC:3E:06:C6"
+        "93:51:EE:C2:F2:8D:51:09:B1:DF:91:5A:55:82:09:72:BC:4A:B2:0A:6E:B2:6D:3F:19:D3:81:C6:CC:3E:06:C6"
       ]
     }
   }
